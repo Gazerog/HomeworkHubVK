@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <title>HomeworkHubVK</title>
+</head>
+<body>
+    <div class="centered_div">
+        <table class="table">
+            <thead>
+                <th>Discipline</th>
+                <th>Start date</th>
+                <th>End date</th>
+            </thead>
+            <tbody>
+                {% for i in context %}
+                <tr>
+                    <td>{{ i.discipline }}</td>
+                    <td>{{ i.start_date }}</td>
+                    <td>{{ i.end_date }} </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
