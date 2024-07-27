@@ -1,5 +1,6 @@
 import os
-from HomeworkHubVK.diary.models import Homework
+
+from HomeworkHubVK.HomeworkHubVK.diary.models import Homework
 from main import main
 
 password = str(os.getenv('password_of_vk'))
